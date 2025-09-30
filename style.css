@@ -1,6 +1,6 @@
 /* =============================================
-   VARIÁVEIS DE CORES E TIPOGRAFIA
-   ============================================= */
+    VARIÁVEIS DE CORES E TIPOGRAFIA
+============================================= */
 :root {
     --primary: #FF6B35;
     --secondary: #FFF5F0;
@@ -13,8 +13,8 @@
 }
 
 /* =============================================
-   ESTILOS GERAIS
-   ============================================= */
+    ESTILOS GERAIS
+============================================= */
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text);
@@ -32,10 +32,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   HEADER E NAVEGAÇÃO
-   ============================================= */
+    HEADER E NAVEGAÇÃO
+============================================= */
 .navbar {
-    background-color: white;
+    background: linear-gradient(90deg, #ff6600, #ff9900);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 15px 0;
 }
@@ -79,8 +79,8 @@ body.dark-mode .nav-link {
 }
 
 /* =============================================
-   BANNER/CARROSSEL
-   ============================================= */
+    BANNER/CARROSSEL
+============================================= */
 .carousel-item {
     height: 500px;
     background-color: #f8f9fa;
@@ -93,8 +93,8 @@ body.dark-mode .nav-link {
 }
 
 /* =============================================
-   CARDS DE PRODUTO
-   ============================================= */
+    CARDS DE PRODUTO
+============================================= */
 .product-card {
     border: none;
     border-radius: 10px;
@@ -140,8 +140,8 @@ body.dark-mode .product-card {
 }
 
 /* =============================================
-   SEÇÃO SOBRE
-   ============================================= */
+    SEÇÃO SOBRE
+============================================= */
 .about-section {
     background-color: var(--secondary);
     padding: 60px 0;
@@ -152,8 +152,8 @@ body.dark-mode .about-section {
 }
 
 /* =============================================
-   FORMULÁRIOS
-   ============================================= */
+    FORMULÁRIOS
+============================================= */
 .contact-form {
     background-color: white;
     border-radius: 10px;
@@ -171,8 +171,8 @@ body.dark-mode .contact-form {
 }
 
 /* =============================================
-   FOOTER
-   ============================================= */
+    FOOTER
+============================================= */
 footer {
     background-color: #333;
     color: white;
@@ -191,8 +191,8 @@ footer {
 }
 
 /* =============================================
-   BOTÃO VOLTAR AO TOPO
-   ============================================= */
+    BOTÃO VOLTAR AO TOPO
+============================================= */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -219,8 +219,8 @@ footer {
 }
 
 /* =============================================
-   MODAL
-   ============================================= */
+    MODAL
+============================================= */
 .modal-content {
     border-radius: 15px;
     overflow: hidden;
@@ -236,8 +236,8 @@ footer {
 }
 
 /* =============================================
-   CARRINHO DE COMPRAS
-   ============================================= */
+    CARRINHO DE COMPRAS
+============================================= */
 .offcanvas-header {
     background-color: var(--primary);
     color: white;
@@ -253,24 +253,24 @@ body.dark-mode .cart-item {
 }
 
 .text-orange {
-  color: #FF6B35 !important;
-}
-.text-orange:hover {
-  color: #e55a2b !important;
+    color: #FF6B35 !important;
 }
 
+.text-orange:hover {
+    color: #e55a2b !important;
+}
 
 /* =============================================
-   TEMA ESCURO
-   ============================================= */
+    TEMA ESCURO
+============================================= */
 .theme-switch {
     cursor: pointer;
     font-size: 1.2rem;
 }
 
 /* =============================================
-   CHATBOT
-   ============================================= */
+    CHATBOT
+============================================= */
 .chatbot-btn {
     position: fixed;
     bottom: 30px;
@@ -328,11 +328,15 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-   ANIMAÇÕES
-   ============================================= */
+    ANIMAÇÕES
+============================================= */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .fade-in {
@@ -340,17 +344,17 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-   RESPONSIVIDADE
-   ============================================= */
+    RESPONSIVIDADE
+============================================= */
 @media (max-width: 768px) {
     .carousel-item {
         height: 300px;
     }
-    
+
     .navbar-nav {
         text-align: center;
     }
-    
+
     .chatbot-btn {
         bottom: 20px;
         right: 20px;
@@ -361,8 +365,8 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-   PÁGINA DE GAMIFICAÇÃO
-   ============================================= */
+    PÁGINA DE GAMIFICAÇÃO
+============================================= */
 .hunt-map {
     position: relative;
     width: 100%;
@@ -425,8 +429,8 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-   PÁGINA DE CADASTRO
-   ============================================= */
+    PÁGINA DE CADASTRO
+============================================= */
 .registration-steps {
     display: flex;
     justify-content: space-between;
@@ -478,8 +482,8 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-   PÁGINA DE COMPRA
-   ============================================= */
+    PÁGINA DE COMPRA
+============================================= */
 .checkout-steps {
     display: flex;
     margin-bottom: 30px;
@@ -526,13 +530,11 @@ body.dark-mode .payment-method {
     border-color: #444;
 }
 
-.payment-method:hover, .payment-method.selected {
+.payment-method:hover,
+.payment-method.selected {
     border-color: var(--primary);
 }
 
 .payment-method.selected {
     background-color: rgba(255, 107, 53, 0.1);
 }
-
-
-
