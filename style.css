@@ -252,6 +252,14 @@ body.dark-mode .cart-item {
     border-bottom: 1px solid #444;
 }
 
+.text-orange {
+  color: #FF6B35 !important;
+}
+.text-orange:hover {
+  color: #e55a2b !important;
+}
+
+
 /* =============================================
    TEMA ESCURO
    ============================================= */
@@ -525,3 +533,6 @@ body.dark-mode .payment-method {
 .payment-method.selected {
     background-color: rgba(255, 107, 53, 0.1);
 }
+
+
+
