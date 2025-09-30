@@ -17,25 +17,15 @@
         </nav>
     </header>
 
-<div class="centraliza-cadastro mt-5 pt-5">
+<div class="centraliza-cadastro">
   <div class="cadastro-row">
-    <div class="col-md-6 mx-auto">
-      <!-- Abas de navegação -->
-      <ul class="nav nav-tabs mb-3" id="cadastroLoginTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="cadastro-tab" data-bs-toggle="tab" data-bs-target="#cadastro" type="button" role="tab">Cadastrar-se</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Login</button>
-        </li>
-      </ul>
 
       <!-- Conteúdo das abas -->
       <div class="tab-content" id="cadastroLoginContent">
         <!-- Aba de Cadastro -->
         <div class="tab-pane fade show active" id="cadastro" role="tabpanel">
           <form class="cadastro-form">
-            <h2 class="mb-4">Criar sua conta</h2>
+            <h2 class="mb-3">Criar sua conta</h2>
             <div class="mb-2">
               <label for="nome" class="form-label">Nome completo</label>
               <input type="text" class="form-control" id="nome" required>
@@ -56,13 +46,15 @@
               <label for="senha" class="form-label">Senha</label>
               <input type="password" class="form-control" id="senha" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+            <div class="text-center mb-3">
+              <button type="submit" class="btn-switch active" id="btnCadastro">Cadastrar-se</button>
+            </div>
           </form>
         </div>
 
         <!-- Aba de Login -->
         <div class="tab-pane fade" id="login" role="tabpanel">
-          <form class="login-form mt-4">
+          <form class="login-form">
             <h2 class="mb-4">Entrar na sua conta</h2>
             <div class="mb-3">
               <label for="loginEmail" class="form-label">E-mail</label>
@@ -72,11 +64,12 @@
               <label for="loginSenha" class="form-label">Senha</label>
               <input type="password" class="form-control" id="loginSenha" required>
             </div>
-            <button type="submit" class="btn btn-success w-100">Entrar</button>
+            <div class="text-center mb-3">
+              <button type="submit" class="btn-switch" id="btnLogin">Login</button>
+            </div>
           </form>
         </div>
       </div>
-    </div>
   </div>
 </div>
 
