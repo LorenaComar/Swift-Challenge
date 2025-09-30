@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =============================================
-   HEADER E NAVEGAÇÃO
+HEADER E NAVEGAÇÃO
    ============================================= */
 .navbar {
     background-color: white;
@@ -219,24 +219,7 @@ footer {
 }
 
 /* =============================================
-   MODAL
-   ============================================= */
-.modal-content {
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.welcome-coupon {
-    background-color: var(--secondary);
-    border: 2px dashed var(--primary);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* =============================================
-   CARRINHO DE COMPRAS
+CARRINHO DE COMPRAS
    ============================================= */
 .offcanvas-header {
     background-color: var(--primary);
@@ -253,15 +236,26 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-   TEMA ESCURO
-   ============================================= */
+    TEMA ESCURO
+    ============================================= */
+/* Tema Escuro */
 .theme-switch {
     cursor: pointer;
     font-size: 1.2rem;
 }
 
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
 /* =============================================
-   CHATBOT
+CHATBOT
    ============================================= */
 .chatbot-btn {
     position: fixed;
@@ -417,60 +411,11 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-   PÁGINA DE CADASTRO
+PÁGINA DE CADASTRO
    ============================================= */
-.registration-steps {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.registration-steps::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #dee2e6;
-    z-index: 1;
-}
-
-.step {
-    position: relative;
-    z-index: 2;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #dee2e6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-.step.active {
-    background-color: var(--primary);
-    color: white;
-}
-
-.step.completed {
-    background-color: var(--success);
-    color: white;
-}
-
-.step-label {
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 0.8rem;
-}
 
 /* =============================================
-   PÁGINA DE COMPRA
+PÁGINA DE COMPRA
    ============================================= */
 .checkout-steps {
     display: flex;
