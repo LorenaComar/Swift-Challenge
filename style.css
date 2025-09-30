@@ -47,12 +47,12 @@ body.dark-mode .navbar {
 .navbar-brand {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--secondary);
     font-size: 1.8rem;
 }
 
 .nav-link {
-    color: var(--text);
+    color: var(--secondary);
     font-weight: 500;
     margin: 0 10px;
 }
@@ -62,7 +62,7 @@ body.dark-mode .nav-link {
 }
 
 .nav-link:hover {
-    color: var(--primary);
+    color: var(--text);
 }
 
 .cart-count {
@@ -260,6 +260,18 @@ body.dark-mode .cart-item {
     color: #e55a2b !important;
 }
 
+.btn-cart {
+  border: 1px solid #ffffff;   /* cor da borda */
+  color: #ffffff;              /* cor do ícone/texto */
+  background-color: transparent;
+}
+
+.btn-cart:hover {
+  background-color: #FF6B35;
+  color: white;
+}
+
+
 /* =============================================
     TEMA ESCURO
 ============================================= */
@@ -268,64 +280,6 @@ body.dark-mode .cart-item {
     font-size: 1.2rem;
 }
 
-/* =============================================
-    CHATBOT
-============================================= */
-.chatbot-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.3s;
-}
-
-.chatbot-btn:hover {
-    transform: scale(1.1);
-}
-
-.chat-messages {
-    height: 300px;
-    overflow-y: auto;
-    padding: 10px;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.message {
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    max-width: 80%;
-}
-
-.bot-message {
-    background-color: #f0f0f0;
-    align-self: flex-start;
-}
-
-.user-message {
-    background-color: var(--primary);
-    color: white;
-    align-self: flex-end;
-    margin-left: auto;
-}
-
-.chat-input {
-    display: flex;
-    gap: 10px;
-}
 
 /* =============================================
     ANIMAÇÕES
