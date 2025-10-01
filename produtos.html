@@ -36,7 +36,7 @@
                             <a class="nav-link" href="index.html">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="produtos.html.html">Produtos</a>
+                            <a class="nav-link" href="produtos.html">Produtos</a>
                         </li>
                        <li class="nav-item">
                             <a class="nav-link" href="gamificacao.html">Caça ao Corte</a>
@@ -247,7 +247,7 @@
 </html>
 
 <script>
-    // Dados dos produtos baseados nas imagens fornecidas
+    
 const products = [
     {
         id: 1,
@@ -642,7 +642,7 @@ function setupEventListeners() {
         searchInput.addEventListener('input', function() {
             searchProducts(this.value);
         });
-    }
+    };
     
     // Smooth scroll para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -657,7 +657,7 @@ function setupEventListeners() {
             }
         });
     });
-}
+};
 
 // Filtrar produtos por categoria
 function filterProducts(category) {
@@ -681,7 +681,7 @@ function searchProducts(query) {
             product.description.toLowerCase().includes(searchTerm) ||
             product.category.toLowerCase().includes(searchTerm)
         );
-    }
+    };
     
     renderProducts();
 }
