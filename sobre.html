@@ -16,6 +16,10 @@
 
   <!-- CSS Customizado -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- JS Customizado -->
+  <script src="main.js"></script>
+
 </head>
 <body>
   <!-- Header -->
@@ -28,8 +32,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
-            <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
-            <li class="nav-item"><a class="nav-link" href="#products">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#home">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
             <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
             <li class="nav-item"><a class="nav-link" href="gamificacao.html">Caça ao Corte</a></li>
           </ul>
@@ -39,11 +43,6 @@
             <div class="theme-switch me-3" id="themeSwitch">
                 <i class="fas fa-moon"></i>
             </div>
-
-            <a href="#" class="btn btn-cart me-3" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
-              <i class="fas fa-shopping-cart"></i>
-              <span class="cart-count" id="cartCount">0</span>
-            </a>
             
             <a href="cadastro.html" class="btn btn-primary">Login</a>
           </div>
@@ -100,27 +99,6 @@
             </div>
         </section>
 
-        <!-- Seção de Produtos -->
-        <section id="products" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Nossos Produtos</h2>
-                
-                <div class="row mb-4">
-                    <div class="col-md-6 offset-md-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Buscar produtos..." id="searchInput">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row" id="productsGrid">
-                    <!-- Os produtos serão carregados dinamicamente via JavaScript -->
-                </div>
-            </div>
-        </section>
 
         <!-- Seção Sobre Nós -->
         <section id="about" class="about-section py-5">
