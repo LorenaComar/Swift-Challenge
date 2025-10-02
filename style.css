@@ -97,17 +97,18 @@ body.dark-mode .nav-link {
 ============================================= */
 .product-card {
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .product-image {
     aspect-ratio: 1 / 1; /* quadrado automático */
     width: 100%;
     background: #f8f9fa;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -135,23 +136,32 @@ body.dark-mode .product-card {
 .product-title {
     font-weight: 600;
     font-size: 1.1rem;
-    margin-top: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.product-description {
+   text-align: center;
 }
 
 .product-price {
     color: var(--primary);
     font-weight: 700;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .btn-primary {
     background-color: var(--primary);
     border-color: var(--primary);
+    display: block;       /* faz o botão se comportar como bloco */
+    margin: 0 auto;       /* centraliza horizontalmente */
+    
 }
 
 .btn-primary:hover {
     background-color: #e55a2b;
-    border-color: #e55a2b;
+    border-color: #ab3a14;
 }
 
 /* =============================================
