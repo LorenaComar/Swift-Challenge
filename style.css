@@ -103,6 +103,21 @@ body.dark-mode .nav-link {
     margin-bottom: 20px;
 }
 
+.product-image {
+    aspect-ratio: 1 / 1; /* quadrado automático */
+    width: 100%;
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 body.dark-mode .product-card {
     background-color: var(--dark-card);
 }
