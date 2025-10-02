@@ -15,6 +15,10 @@ VARIÁVEIS DE CORES E TIPOGRAFIA
 --dark-card: #2d2d2d;
 }
 
+html {
+scroll-padding-top: 70px;
+}
+
 /* =============================================
 HEADER E NAVEGAÇÃO
 ============================================= */
@@ -31,7 +35,7 @@ background-color: var(--primary);
 .navbar-brand {
 font-family: 'Poppins', sans-serif;
 font-weight: 800;
-color: var(--dark-bg);
+color: var(--dark-text);
 font-size: 1.8rem;
 }
 
@@ -75,7 +79,7 @@ min-height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
-padding-top: 0;
+padding-top: 70px;
 margin-top: 1rem;
 }
 
@@ -95,14 +99,6 @@ box-shadow: 0 0 16px rgba(0,0,0,0.10);
 padding: 30px 30px;
 width: 500px;
 font-size: 1.08rem;         
-}
-
-.cadastro-form button {
-background-color: var(--primary);
-}
-
-.cadastro-form button:hover {
-background-color: var(--primary-dark);
 }
 
 .login-form {
@@ -125,7 +121,7 @@ align-items: center;
 }
 
 .nav-tabs .nav-link {
-color: #333; 
+color: var(--dark-text); 
 background-color: #f8f9fa; 
 border: 1px solid #dee2e6;
 }
@@ -135,33 +131,64 @@ color: #fff;
 background-color: var(--primary); 
 }
 
-.btn-switch {
-padding: 0.6rem 1.2rem;
-border-radius: 30px;
-border: 2px solid #ff6b00;
-background-color: white;
-color: var(--dark-text);
-font-weight: bold;
-transition: all 0.3s ease;
-}
-
-button {
-background: linear-gradient(90deg, #ff6600, #ff9900);
-transition: background 0.3s;
-}
-button:hover {
-background: linear-gradient(90deg, #ff9900, #ff6600);
-}
 .form-container {
 border-radius: 16px;
 box-shadow: 0 4px 24px #0001;
 }
+
+#toast {
+visibility: hidden;
+min-width: 250px;
+margin-left: -125px;
+background: linear-gradient(90deg, #ff6600, #ff9900);
+color: #fff;
+text-align: center;
+border-radius: 30px;
+border: 2px solid #ff6b00;
+padding: 0.6rem 1.2rem;
+position: fixed;
+transition: background 0.3s;
+z-index: 1;
+left: 50%;
+bottom: 30px;
+font-size: 18px;
+font-weight: bold;
+box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+transition: all 0.3s ease;
+opacity: 0;
+}
+
+.centraliza-cadastro button:hover {
+cursor: pointer;
+background: linear-gradient(90deg, #ff9900, #ff6600);
+}
+
+#toast.show {
+visibility: visible;
+opacity: 1;
+}
+
+.centraliza-cadastro button {
+background: linear-gradient(90deg, #ff6600, #ff9900);
+border: none;
+color: white;
+text-align: center;
+border-radius: 30px;
+border: 2px solid #ff6b00;
+padding: 0.6rem 1.2rem;
+transition: background 0.3s;
+font-size: 18px;
+font-weight: bold;
+box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
 /* =============================================
 FOOTER
 ============================================= */
 footer {
 background-color: #333;
 color: white;
+margin-top: 30px;
 padding: 40px 0 20px;
 }
 
