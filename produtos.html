@@ -22,29 +22,26 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <i class="fas fa-meat"></i> Swift <span class="text-primary">Carnes Premium</span>
-        </a>
+        <a class="navbar-brand" href="produtos.html"><img src="img/logo-swift-interna-1-_1661799767.png" alt="Logo Swift" class="logo-swift"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html#home">Início</a></li>
             <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
             <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
             <li class="nav-item"><a class="nav-link" href="gamificacao.html">Caça ao Corte</a></li>
           </ul>
 
-          <div class="d-flex align-items-center">
-            <div class="theme-switch me-3" id="themeSwitch">
-              <i class="fas fa-moon"></i>
-            </div>
+          <div class="btn-header">
             <a href="#" class="btn btn-cart me-3" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
               <i class="fas fa-shopping-cart"></i>
               <span class="cart-count" id="cartCount">0</span>
             </a>
-            <a href="cadastro.html" class="btn btn-primary">Login</a>
+
+            <a href="login.html" class="btn btn-login">
+              <i class="fas fa-user"></i>
+              Login</a>
           </div>
         </div>
       </div>
@@ -85,18 +82,28 @@
       <div class="container">
         <h2 class="text-center mb-5">Nossos Produtos</h2>
 
-        <!-- Barra de busca -->
-        <div class="row mb-4">
-          <div class="col-md-6 offset-md-3">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Buscar produtos..." id="searchInput">
-              <button class="btn btn-primary" type="button">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </div>
+    <!-- Filtros -->
+    <div class="row mb-4">
+      <div class="col-md-8 offset-md-2">
+        <div class="filter-buttons text-center mb-4">
+          <button class="btn btn-outline-primary me-2 filter-btn active" data-filter="all">
+            Todos os Produtos
+          </button>
+          <button class="btn btn-outline-primary me-2 filter-btn" data-filter="carne">
+            Carnes
+          </button>
+          <button class="btn btn-outline-primary me-2 filter-btn" data-filter="frango">
+            Frango
+          </button>
+          <button class="btn btn-outline-primary me-2 filter-btn" data-filter="peixe">
+            Peixes
+          </button>
+          <button class="btn btn-outline-primary me-2 filter-btn" data-filter="outros">
+            Outros
+          </button>
         </div>
-
+      </div>
+    </div>
         <!-- Grid -->
         <div class="row" id="productsGrid"><!-- JS renderiza aqui --></div>
       </div>

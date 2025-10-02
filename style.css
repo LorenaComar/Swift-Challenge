@@ -195,11 +195,22 @@ text-align: center;
 ============================================= */
 .about-section {
     background-color: var(--secondary);
-    padding: 60px 0;
+    padding: 10px 0;
 }
 
 body.dark-mode .about-section {
     background-color: #252525;
+}
+
+.carousel-inner {
+  height: 200px; /* ajuste a altura que você quiser */
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;  /* cobre toda a área mantendo proporção */
+  object-position: center; /* centraliza a imagem */
 }
 
 /* =============================================
@@ -219,6 +230,17 @@ body.dark-mode .contact-form {
 .form-control:focus {
     border-color: var(--primary);
     box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.25);
+}
+
+.carousel-inner {
+  height: 500px; /* ajuste a altura que você quiser */
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;  /* cobre toda a área mantendo proporção */
+  object-position: center; /* centraliza a imagem */
 }
 
 /* =============================================
