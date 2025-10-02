@@ -4,6 +4,7 @@
 :root {
     --primary: #FF6B35;
     --secondary: #FFF5F0;
+    --thirdary: #ff9900;
     --text: #333333;
     --success: #28A745;
     --alert: #FFC107;
@@ -37,18 +38,18 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     background: linear-gradient(90deg, #ff6600, #ff9900);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
+    padding: 0;
 }
 
 body.dark-mode .navbar {
     background-color: var(--dark-card);
 }
 
-.navbar-brand {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    color: var(--secondary);
-    font-size: 1.8rem;
+.logo-swift {
+    height: 80px;
+    max-width: 220px;   
+    width: 100%;        
+    object-fit: contain;
 }
 
 .nav-link {
@@ -57,16 +58,16 @@ body.dark-mode .navbar {
     margin: 0 10px;
 }
 
+.nav-link:hover {
+    color: var(--dark-card);
+}
+
 body.dark-mode .nav-link {
     color: var(--dark-text);
 }
 
-.nav-link:hover {
-    color: var(--text);
-}
-
 .cart-count {
-    background-color: var(--primary);
+    background-color: var(--thirdary);
     color: white;
     border-radius: 50%;
     width: 20px;
@@ -74,8 +75,33 @@ body.dark-mode .nav-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-left: 5px;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;   
+    border-radius: 10px;      
+    align-items: center;
+    justify-content: center;
+    display: flex;            
+    gap: 8px;                 
+    font-size: 16px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-login:hover {
+    background-color: #FF6B35;
+    color: white;
+    border: 1px solid #FF6B35; 
+}
+
+.btn-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 /* =============================================
@@ -141,7 +167,7 @@ body.dark-mode .product-card {
 }
 
 .product-description {
-   text-align: center;
+text-align: center;
 }
 
 .product-price {
@@ -213,6 +239,15 @@ footer {
 
 .social-links a:hover {
     color: var(--primary);
+}
+
+.social-links a {
+text-decoration: none; /* Remove sublinhado */
+border-bottom: none;   /* Remove borda inferior */
+}
+.social-links a i {
+text-decoration: none;
+border-bottom: none;
 }
 
 /* =============================================
@@ -323,7 +358,7 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-    RESPONSIVIDADE
+RESPONSIVIDADE
 ============================================= */
 @media (max-width: 768px) {
     .carousel-item {
@@ -344,7 +379,7 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-    PÁGINA DE GAMIFICAÇÃO
+PÁGINA DE GAMIFICAÇÃO
 ============================================= */
 .hunt-map {
     position: relative;
@@ -408,60 +443,7 @@ body.dark-mode .cart-item {
 }
 
 /* =============================================
-    PÁGINA DE CADASTRO
-============================================= */
-.registration-steps {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.registration-steps::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: #dee2e6;
-    z-index: 1;
-}
-
-.step {
-    position: relative;
-    z-index: 2;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #dee2e6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-.step.active {
-    background-color: var(--primary);
-    color: white;
-}
-
-.step.completed {
-    background-color: var(--success);
-    color: white;
-}
-
-.step-label {
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 0.8rem;
-}
-
-/* =============================================
-    PÁGINA DE COMPRA
+PÁGINA DE COMPRA
 ============================================= */
 .checkout-steps {
     display: flex;
