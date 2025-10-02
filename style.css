@@ -521,3 +521,36 @@ body.dark-mode .payment-method {
 .payment-method.selected {
     background-color: rgba(255, 107, 53, 0.1);
 }
+
+/* Laranja principal do banner Swift */
+:root {
+  --swift-orange: #f15a24; /* ajuste se precisar */
+}
+
+/* Botão sólido Swift */
+.btn-swift {
+  color: #fff;
+  background-color: var(--swift-orange);
+  border-color: var(--swift-orange);
+}
+
+.btn-swift:hover,
+.btn-swift:focus {
+  background-color: #d94e1f; /* tom mais escuro para hover */
+  border-color: #d94e1f;
+}
+
+/* Botão contorno Swift */
+.btn-outline-swift {
+  color: var(--swift-orange);
+  border-color: var(--swift-orange);
+  background-color: transparent;
+}
+
+.btn-outline-swift:hover,
+.btn-outline-swift:focus,
+.btn-outline-swift.active {
+  background-color: var(--swift-orange);
+  color: #fff;
+  border-color: var(--swift-orange);
+}
