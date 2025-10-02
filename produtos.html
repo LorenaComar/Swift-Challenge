@@ -1,826 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swift - Catálogo de Produtos</title>
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS Customizado -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swift - Carnes Premium</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Customizado -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header com Navbar Responsiva -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <i class="fas fa-meat"></i> Swift <span class="text-primary">Carnes Premium</span>
-                </a>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="produtos.html">Produtos</a>
-                        </li>
-                       <li class="nav-item">
-                            <a class="nav-link" href="gamificacao.html">Caça ao Corte</a>
-                        </li>
-                    </ul>
-                    
-                      <div class="d-flex align-items-center">
-                        <div class="theme-switch me-3" id="themeSwitch">
-                            <i class="fas fa-moon"></i>
-                        </div>
-                        
-                        <a href="compra.html" class="btn btn-outline-primary me-3">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-count" id="cartCount">0</span>
-                        </a>
-                        
-                        <a href="cadastro.html" class="btn btn-primary">Cadastre-se</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-meat"></i> Swift <span class="text-primary">Carnes Premium</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#home">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nós</a></li>
+            <li class="nav-item"><a class="nav-link" href="gamificacao.html">Caça ao Corte</a></li>
+          </ul>
 
-    <!-- Conteúdo Principal -->
-    <main>
-        <!-- Seção Banner -->
-        <section id="home" class="hero-section">
-            <div class="container">
-                <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-6">
-                        <h1 class="display-4 fw-bold mb-4">
-                            Carnes Premium <span class="text-primary">Swift</span>
-                        </h1>
-                        <p class="lead mb-4">
-                            Descubra nossa seleção exclusiva de carnes e produtos gourmet, 
-                            cuidadosamente escolhidos para proporcionar a melhor experiência gastronômica.
-                        </p>
-                        <a href="#products" class="btn btn-primary btn-lg me-3">
-                            <i class="fas fa-shopping-bag"></i> Ver Produtos
-                        </a>
-                        <a href="#about" class="btn btn-outline-primary btn-lg">
-                            <i class="fas fa-info-circle"></i> Saiba Mais
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="hero-image">
-                            <i class="fas fa-utensils display-1 text-primary"></i>
-                        </div>
-                    </div>
-                </div>
+          <div class="d-flex align-items-center">
+            <div class="theme-switch me-3" id="themeSwitch">
+              <i class="fas fa-moon"></i>
             </div>
-        </section>
-
-        <!-- Seção de Produtos -->
-        <section id="products" class="py-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bold">Nossos Produtos</h2>
-                    <p class="lead">Explore nossa linha completa de carnes premium e produtos especiais</p>
-                </div>
-                
-                <!-- Filtros -->
-                <div class="row mb-4">
-                    <div class="col-md-8 offset-md-2">
-                        <div class="filter-buttons text-center mb-4">
-                            <button class="btn btn-outline-primary me-2 filter-btn active" data-filter="all">
-                                Todos os Produtos
-                            </button>
-                            <button class="btn btn-outline-primary me-2 filter-btn" data-filter="carne">
-                                Carnes
-                            </button>
-                            <button class="btn btn-outline-primary me-2 filter-btn" data-filter="frango">
-                                Frango
-                            </button>
-                            <button class="btn btn-outline-primary me-2 filter-btn" data-filter="peixe">
-                                Peixes
-                            </button>
-                            <button class="btn btn-outline-primary me-2 filter-btn" data-filter="outros">
-                                Outros
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Grid de Produtos -->
-                <div class="row" id="productsGrid">
-                    <!-- Os produtos serão carregados com o javascriptt -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Sobre -->
-        <section id="about" class="py-5 bg-light">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <h2 class="display-6 fw-bold mb-4">Sobre a Swift</h2>
-                        <p class="mb-4">
-                            Desde 2010, a Swift tem como missão levar até sua casa as melhores carnes 
-                            e cortes especiais, selecionados cuidadosamente pelos nossos especialistas.
-                        </p>
-                        <p class="mb-4">
-                            Nossa equipe percorre os melhores produtores do Brasil e do mundo para 
-                            trazer até você uma experiência gastronômica única, com qualidade premium 
-                            e sabor incomparável.
-                        </p>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="stat-item text-center">
-                                    <h3 class="text-primary">10.000+</h3>
-                                    <p>Clientes Satisfeitos</p>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="stat-item text-center">
-                                    <h3 class="text-primary">50+</h3>
-                                    <p>Produtos Premium</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-features">
-                            <div class="feature-item d-flex mb-3">
-                                <div class="feature-icon me-3">
-                                    <i class="fas fa-award text-primary"></i>
-                                </div>
-                                <div>
-                                    <h5>Qualidade Premium</h5>
-                                    <p>Produtos selecionados com os mais altos padrões de qualidade.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item d-flex mb-3">
-                                <div class="feature-icon me-3">
-                                    <i class="fas fa-shipping-fast text-primary"></i>
-                                </div>
-                                <div>
-                                    <h5>Entrega Rápida</h5>
-                                    <p>Frete grátis para compras acima de R$ 200,00.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item d-flex mb-3">
-                                <div class="feature-icon me-3">
-                                    <i class="fas fa-leaf text-primary"></i>
-                                </div>
-                                <div>
-                                    <h5>Sustentabilidade</h5>
-                                    <p>Comprometidos com práticas sustentáveis e responsáveis.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h4>Swift Carnes Premium</h4>
-                    <p>Oferecemos os melhores cortes de carne para os amantes da gastronomia.</p>
-                    <div class="social-links">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <h4>Links Rápidos</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#home" class="text-white-50">Início</a></li>
-                        <li><a href="#products" class="text-white-50">Produtos</a></li>
-                        <li><a href="#about" class="text-white-50">Sobre</a></li>
-                        <li><a href="#" class="text-white-50">Contato</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <h4>Contato</h4>
-                    <p><i class="fas fa-envelope me-2"></i> contato@swiftcarnes.com</p>
-                    <p><i class="fas fa-phone me-2"></i> (11) 5555-9999</p>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> São Paulo, SP</p>
-                </div>
-            </div>
-            
-            <hr class="bg-light">
-            
-            <div class="text-center">
-                <p class="mb-0">&copy; 2023 Swift Carnes Premium. Todos os direitos reservados.</p>
-            </div>
+            <a href="#" class="btn btn-cart me-3" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
+            <a href="cadastro.html" class="btn btn-primary">Login</a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Botão Voltar ao Topo -->
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-6">
+            <h1 class="display-4 fw-bold mb-4">
+              Carnes Premium <span class="text-primary">Swift</span>
+            </h1>
+            <p class="lead mb-4">
+              Descubra nossa seleção exclusiva de carnes e produtos gourmet,
+              cuidadosamente escolhidos para proporcionar a melhor experiência gastronômica.
+            </p>
+            <a href="#products" class="btn btn-primary btn-lg me-3">
+              <i class="fas fa-shopping-bag"></i> Ver Produtos
+            </a>
+            <a href="sobre.html" class="btn btn-outline-primary btn-lg">
+              <i class="fas fa-info-circle"></i> Saiba Mais
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image text-center">
+              <i class="fas fa-utensils display-1 text-primary"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    
+    <!-- Produtos -->
+    <section id="products" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Nossos Produtos</h2>
+
+        <!-- Barra de busca -->
+        <div class="row mb-4">
+          <div class="col-md-6 offset-md-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Buscar produtos..." id="searchInput">
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="row" id="productsGrid"><!-- JS renderiza aqui --></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h4>Swift Carnes Premium</h4>
+          <p>Oferecemos os melhores cortes de carne para os amantes da gastronomia.</p>
+          <div class="social-links">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4>Links Rápidos</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html#home" class="text-white-50">Início</a></li>
+            <li><a href="produtos.html" class="text-white-50">Produtos</a></li>
+            <li><a href="sobre.html" class="text-white-50">Sobre Nós</a></li>
+            <li><a href="gamificacao.html" class="text-white-50">Caça ao Corte</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4>Contato</h4>
+          <p><i class="fas fa-envelope me-2"></i> contato@swiftcarnes.com</p>
+          <p><i class="fas fa-phone me-2"></i> (11) 5555-9999</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> São Paulo, SP</p>
+        </div>
+      </div>
+      <hr class="bg-light">
+      <div class="text-center">
+        <p class="mb-0">&copy; 2023 Swift Carnes Premium. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Offcanvas Carrinho -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Seu Carrinho</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems"><p class="text-center">Seu carrinho está vazio.</p></div>
+      <div class="mt-auto border-top pt-3">
+        <div class="d-flex justify-content-between mb-3">
+          <strong>Total:</strong>
+          <strong id="cartTotal">R$ 0,00</strong>
+        </div>
+        <button class="btn btn-primary w-100">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Boas-vindas -->
+  <div class="modal fade" id="welcomeModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bem-vindo à Swift!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Que alegria ter você aqui! Na Swift, você encontra as melhores carnes e cortes premium.</p>
+          <div class="welcome-coupon">
+            <h4>Presente especial para você!</h4>
+            <h3 class="text-primary">CHEGUEI20</h3>
+            <p>Use este cupom e ganhe 20% de desconto na sua primeira compra!</p>
+          </div>
+          <p>Aproveite nossa seleção exclusiva e frete grátis para compras acima de R$ 200.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Explorar Produtos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
-
-<script>
-    
-const products = [
-    {
-        id: 1,
-        name: "Bife de Contrafilé Combo 1Kg",
-        image:"img/contrafile.png" ,
-        price: 89.90,
-        oldPrice: 109.90,
-        category: "carne",
-        description: "Contrafilé premium em combo especial de 1kg, ideal para churrascos e grelhados.",
-        badge: "Oferta"
-    },
-    {
-        id: 2,
-        name: "Pão Recheado Doce de Leite Swift 300g",
-        image: "img/recheadodocedeleite.png",
-        price: 12.90,
-        oldPrice: null,
-        category: "outros",
-        description: "Delicioso pão recheado com doce de leite cremoso, perfeito para o café da manhã.",
-        badge: "Novo"
-    },
-    {
-        id: 3,
-        name: "Iscas de Frango Swift 300g",
-        image: "img/iscadefrango.png",
-        price: 18.90,
-        oldPrice: null,
-        category: "frango",
-        description: "Iscas de frango temperadas e prontas para o preparo, práticas e saborosas.",
-        badge: "Popular"
-    },
-    {
-        id: 4,
-        name: "Caldo de Mandioca com Costela Swift 350g",
-        image: "img/caldodemandioca.png",
-        price: 15.90,
-        oldPrice: null,
-        category: "outros",
-        description: "Caldo nutritivo de mandioca com pedaços de costela, ideal para refeições reconfortantes.",
-        badge: "Tradicional"
-    },
-    {
-        id: 5,
-        name: "Bife de Patinho Swift 1kg",
-        image: "img/bifedepatinho.png",
-        price: 45.90,
-        oldPrice: 52.90,
-        category: "carne",
-        description: "Bife de patinho macio e suculento, corte versátil para diversas preparações.",
-        badge: "Oferta"
-    },
-    {
-        id: 6,
-        name: "Bacon em Cubos Swift 250g",
-        image: "img/baconemcubos.png",
-        price: 22.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Bacon cortado em cubos práticos, ideal para risotos, massas e refogados.",
-        badge: "Prático"
-    },
-    {
-        id: 7,
-        name: "Lasanha Bolonhesa Swift 600g",
-        image: "img/lasanhabolonhesa.png",
-        price: 28.90,
-        oldPrice: null,
-        category: "outros",
-        description: "Lasanha congelada com molho bolonhesa tradicional, pronta para assar.",
-        badge: "Congelado"
-    },
-    {
-        id: 8,
-        name: "Medalhão de Filé Mignon Suíno Swift 1Kg",
-        image: "img/medalhaosuino.png",
-        price: 65.90,
-        oldPrice: 75.90,
-        category: "carne",
-        description: "Medalhões de filé mignon suíno premium, corte nobre e extremamente macio.",
-        badge: "Premium"
-    },
-    {
-        id: 9,
-        name: "Carne Moída de Patinho Swift",
-        image: "img/carnemoidapatinho.png",
-        price: 24.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Carne moída de patinho fresca, ideal para hambúrgueres, molhos e refogados.",
-        badge: "Fresco"
-    },
-    {
-        id: 10,
-        name: "Costela Suína Swift",
-        image: "img/costelasuina.png",
-        price: 32.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Costela suína com osso, perfeita para assados e cozidos demorados.",
-        badge: "Tradicional"
-    },
-    {
-        id: 11,
-        name: "Bife de Lombo Suíno Linha Mais 1Kg",
-        image: "img/bifedelombosuino.png",
-        price: 38.90,
-        oldPrice: 44.90,
-        category: "carne",
-        description: "Bife de lombo suíno da linha premium, corte magro e saboroso.",
-        badge: "Linha Mais"
-    },
-    {
-        id: 12,
-        name: "Bife de Alcatra Swift 1kg",
-        image: "img/bifedealcatra.png",
-        price: 78.90,
-        oldPrice: 89.90,
-        category: "carne",
-        description: "Bife de alcatra premium, um dos cortes mais nobres e saborosos.",
-        badge: "Premium"
-    },
-    {
-        id: 13,
-        name: "Farofa Tradicional Swift 400g",
-        image: "img/farofatradicional.png",
-        price: 8.90,
-        oldPrice: null,
-        category: "outros",
-        description: "Farofa tradicional temperada, acompanhamento clássico da culinária brasileira.",
-        badge: "Tradicional"
-    },
-    {
-        id: 14,
-        name: "Pedaços de Filé de Salmão Swift 500g",
-        image: "img/pedacosdesalmao.png",
-        price: 89.90,
-        oldPrice: null,
-        category: "peixe",
-        description: "Filé de salmão em pedaços, rico em ômega 3 e proteínas de alta qualidade.",
-        badge: "Saudável"
-    },
-    {
-        id: 15,
-        name: "Filé de Tilápia Swift 800g",
-        image: "img/filedetilapia.png",
-        price: 35.90,
-        oldPrice: null,
-        category: "peixe",
-        description: "Filé de tilápia fresco, peixe de sabor suave e textura delicada.",
-        badge: "Fresco"
-    },
-    {
-        id: 16,
-        name: "Linguiça Toscana Swift 700g",
-        image: "img/linguicatoscana.png",
-        price: 26.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Linguiça toscana tradicional, temperada com ervas e especiarias selecionadas.",
-        badge: "Artesanal"
-    },
-    {
-        id: 17,
-        name: "Medalhão de Filé de Frango com Bacon Swift 500g",
-        image: "img/medalhaodefiledefrango.png",
-        price: 34.90,
-        oldPrice: null,
-        category: "frango",
-        description: "Medalhões de filé de frango envolvidos com bacon, combinação irresistível.",
-        badge: "Especial"
-    },
-    {
-        id: 18,
-        name: "Salsicha Hot Dog Swift 500g",
-        image: "img/salsichahotdog.png",
-        price: 14.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Salsicha tipo hot dog, perfeita para lanches rápidos e práticos.",
-        badge: "Prático"
-    },
-    {
-        id: 19,
-        name: "Picanha Linha Mais de 1,1Kg a 1,6Kg",
-        image: "img/picanhalinhamais.png",
-        price: 159.90,
-        oldPrice: 189.90,
-        category: "carne",
-        description: "Picanha premium da linha mais, o corte mais desejado para churrascos.",
-        badge: "Premium"
-    },
-    {
-        id: 20,
-        name: "Fettuccine com Peito de Peru e Brócolis Swift 350g",
-        image: "img/fettuccinecompeitodeperu.png",
-        price: 19.90,
-        oldPrice: null,
-        category: "outros",
-        description: "Massa fettuccine com peito de peru e brócolis, refeição completa e saudável.",
-        badge: "Saudável"
-    },
-    {
-        id: 21,
-        name: "Camarão Pré-cozido Descascado sem Cabeça",
-        image: "img/camaraocozido.png",
-        price: 79.90,
-        oldPrice: null,
-        category: "peixe",
-        description: "Camarão pré-cozido e descascado, pronto para uso em diversas receitas.",
-        badge: "Prático"
-    },
-    {
-        id: 22,
-        name: "Carne Moída Swift 1kg",
-        image: "img/carnemoida.png",
-        price: 28.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Carne moída de em embalagem econômica de 1kg.",
-        badge: "Econômico"
-    },
-    {
-        id: 23,
-        name: "Kit Feijoada Swift",
-        image: "img/feijoada.png",
-        price: 45.90,
-        oldPrice: null,
-        category: "outros",
-        description: "Kit completo para feijoada com todos os ingredientes tradicionais.",
-        badge: "Completo"
-    },
-    {
-        id: 24,
-        name: "Linguiça Tipo Calabresa Defumada Swift 400g",
-        image: "img/linguicadefumada.png",
-        price: 18.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Linguiça calabresa defumada, sabor intenso e marcante.",
-        badge: "Defumado"
-    },
-    {
-        id: 25,
-        name: "Cubos de Costela Swift 500g",
-        image: "img/cubosdecostelas.png",
-        price: 35.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Costela cortada em cubos práticos, ideal para ensopados e cozidos.",
-        badge: "Prático"
-    },
-    {
-        id: 26,
-        name: "Meio da Asa (Tulipa) Temperada Swift 1Kg",
-        image: "img/meiodaasa.png",
-        price: 22.90,
-        oldPrice: null,
-        category: "frango",
-        description: "Meio da asa de frango temperado, perfeito para assados e grelhados.",
-        badge: "Temperado"
-    },
-    {
-        id: 27,
-        name: "Linguiça de Pernil com Queijo Coalho, Tomate Seco e Manjericão Swift",
-        image: "img/linguicacomcoalhada.png",
-        price: 32.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Linguiça gourmet de pernil com queijo coalho, tomate seco e manjericão.",
-        badge: "Gourmet"
-    },
-    {
-        id: 28,
-        name: "Posta de Cação Planalto 800g",
-        image: "img/postadecacao.png",
-        price: 42.90,
-        oldPrice: null,
-        category: "peixe",
-        description: "Posta de cação fresca, peixe de carne firme e sabor marcante.",
-        badge: "Fresco"
-    },
-    {
-        id: 29,
-        name: "Hambúrguer Gran Reserva Swift",
-        image: "img/hamburguergran.png",
-        price: 24.90,
-        oldPrice: null,
-        category: "carne",
-        description: "Hambúrguer artesanal da linha Gran Reserva, sabor premium.",
-        badge: "Artesanal"
-    },
-    {
-        id: 30,
-        name: "Filé de Peito Linha Mais 1kg",
-        image: "img/peitodalinhamais.png",
-        price: 28.90,
-        oldPrice: 34.90,
-        category: "frango",
-        description: "Filé de peito de frango da linha premium, corte magro e versátil.",
-        badge: "Linha Mais"
-    },
-    {
-        id: 31,
-        name: "Peito de Frango Temperado Desfiado Swift 400g",
-        image: "img/peitodefrangotemperado.png",
-        price: 16.90,
-        oldPrice: null,
-        category: "frango",
-        description: "Peito de frango temperado e desfiado, pronto para uso em sanduíches e saladas.",
-        badge: "Pronto"
-    }
-];
-
-// Variáveis globais
-let filteredProducts = [...products];
-let cart = [];
-
-// Inicialização da página
-document.addEventListener('DOMContentLoaded', function() {
-    renderProducts();
-    setupEventListeners();
-    setupScrollEffects();
-});
-
-// Renderizar produtos
-function renderProducts() {
-    const productsGrid = document.getElementById('productsGrid');
-    
-    if (filteredProducts.length === 0) {
-        productsGrid.innerHTML = `
-            <div class="col-12 text-center">
-                <div class="alert alert-info">
-                    <i class="fas fa-search"></i>
-                    <h4>Nenhum produto encontrado</h4>
-                    <p>Tente ajustar os filtros ou buscar por outros termos.</p>
-                </div>
-            </div>
-        `;
-        return;
-    }
-    
-    productsGrid.innerHTML = filteredProducts.map(product => `
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-4 product-item fade-in-up" data-category="${product.category}">
-            <div class="product-card" data-category="${product.category}">
-                <div class="product-image">
-                    <img src="${product.image}" alt="${product.name}" loading="lazy">
-                    <div class="product-badge">${product.badge}</div>
-                </div>
-                <div class="product-info">
-                    <h5 class="product-title">${product.name}</h5>
-                    <p class="product-description">${product.description}</p>
-                    <div class="product-price">
-                        R$ ${product.price.toFixed(2).replace('.', ',')}
-                        ${product.oldPrice ? `<span class="old-price">R$ ${product.oldPrice.toFixed(2).replace('.', ',')}</span>` : ''}
-                    </div>
-                    <button class="btn btn-primary btn-add-cart" onclick="addToCart(${product.id})">
-                        <i class="fas fa-shopping-cart"></i> Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-        </div>
-    `).join('');
-    
-    // Aplicar animação aos produtos
-    setTimeout(() => {
-        document.querySelectorAll('.product-item').forEach((item, index) => {
-            setTimeout(() => {
-                item.classList.add('fade-in-up');
-            }, index * 100);
-        });
-    }, 100);
-}
-
-// Configurar event listeners
-function setupEventListeners() {
-    // Filtros de categoria
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Remover classe active de todos os botões
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            // Adicionar classe active ao botão clicado
-            this.classList.add('active');
-            
-            const filter = this.getAttribute('data-filter');
-            filterProducts(filter);
-        });
-    });
-    
-    // Busca de produtos
-    const searchInput = document.getElementById('searchInput');
-    if (searchInput) {
-        searchInput.addEventListener('input', function() {
-            searchProducts(this.value);
-        });
-    };
-    
-    // Smooth scroll para links internos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-};
-
-// Filtrar produtos por categoria
-function filterProducts(category) {
-    if (category === 'all') {
-        filteredProducts = [...products];
-    } else {
-        filteredProducts = products.filter(product => product.category === category);
-    }
-    renderProducts();
-}
-
-// Buscar produtos
-function searchProducts(query) {
-    const searchTerm = query.toLowerCase().trim();
-    
-    if (searchTerm === '') {
-        filteredProducts = [...products];
-    } else {
-        filteredProducts = products.filter(product => 
-            product.name.toLowerCase().includes(searchTerm) ||
-            product.description.toLowerCase().includes(searchTerm) ||
-            product.category.toLowerCase().includes(searchTerm)
-        );
-    };
-    
-    renderProducts();
-}
-
-// Adicionar produto ao carrinho
-function addToCart(productId) {
-    const product = products.find(p => p.id === productId);
-    if (product) {
-        const existingItem = cart.find(item => item.id === productId);
-        
-        if (existingItem) {
-            existingItem.quantity += 1;
-        } else {
-            cart.push({
-                ...product,
-                quantity: 1
-            });
-        }
-        
-        updateCartCount();
-        showAddToCartFeedback(product.name);
-    }
-}
-
-// Atualizar contador do carrinho
-function updateCartCount() {
-    const cartCount = document.getElementById('cartCount');
-    if (cartCount) {
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCount.textContent = totalItems;
-    }
-}
-
-// Mostrar feedback ao adicionar produto
-function showAddToCartFeedback(productName) {
-    // Criar toast notification
-    const toast = document.createElement('div');
-    toast.className = 'toast-notification';
-    toast.innerHTML = `
-        <div class="toast-content">
-            <i class="fas fa-check-circle text-success"></i>
-            <span>${productName} adicionado ao carrinho!</span>
-        </div>
-    `;
-    
-    // Adicionar estilos inline para o toast
-    toast.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: white;
-        padding: 15px 20px;
-        border-radius: 10px;
-        box-shadow: 0 5px 25px rgba(0,0,0,0.2);
-        z-index: 9999;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    `;
-    
-    document.body.appendChild(toast);
-    
-    // Animar entrada
-    setTimeout(() => {
-        toast.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Remover após 3 segundos
-    setTimeout(() => {
-        toast.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            document.body.removeChild(toast);
-        }, 300);
-    }, 3000);
-}
-
-// Configurar efeitos de scroll
-function setupScrollEffects() {
-    // Botão voltar ao topo
-    const backToTop = document.querySelector('.back-to-top');
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTop.classList.add('show');
-        } else {
-            backToTop.classList.remove('show');
-        }
-    });
-    
-    // Scroll suave para o topo
-    if (backToTop) {
-        backToTop.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-    
-    // Animação de elementos ao entrar na viewport
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
-            }
-        });
-    }, observerOptions);
-    
-    // Observar elementos que devem ser animados
-    document.querySelectorAll('.product-card, .feature-item, .stat-item').forEach(el => {
-        observer.observe(el);
-    });
-}
-
-// Função para obter informações do carrinho (para uso futuro)
-function getCartInfo() {
-    return {
-        items: cart,
-        totalItems: cart.reduce((sum, item) => sum + item.quantity, 0),
-        totalValue: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
-    };
-}
-
-// Função para limpar carrinho
-function clearCart() {
-    cart = [];
-    updateCartCount();
-}
-
-// Exportar funções para uso global
-window.addToCart = addToCart;
-window.filterProducts = filterProducts;
-window.searchProducts = searchProducts;
-window.getCartInfo = getCartInfo;
-window.clearCart = clearCart;
-
-</script>
