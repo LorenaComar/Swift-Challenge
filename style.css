@@ -67,7 +67,7 @@ body.dark-mode .nav-link {
 }
 
 .cart-count {
-    background-color: var(--thirdary);
+    background-color: var(--primary);
     color: white;
     border-radius: 50%;
     width: 20px;
@@ -553,4 +553,8 @@ body.dark-mode .payment-method {
   background-color: var(--swift-orange);
   color: #fff;
   border-color: var(--swift-orange);
+}
+
+.text-primary-orange {
+    color: #ff6600;
 }
