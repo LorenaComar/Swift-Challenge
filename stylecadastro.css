@@ -39,6 +39,11 @@ background-color: var(--primary);
     object-fit: contain;
 }
 
+.logo-swift:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
 .nav-link {
 color: var(--dark-text);
 font-weight: 500;
@@ -95,7 +100,7 @@ max-width: 600px;
 .cadastro-form{
 background: #fff;
 border-radius: 5px;
-box-shadow: 0 0 16px rgba(0,0,0,0.10);
+box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 padding: 30px 30px;
 width: 500px;
 font-size: 1.08rem;         
@@ -109,6 +114,51 @@ padding: 42px 30px;
 width: 100%;
 max-width: 720px;
 font-size: 1.08rem;  
+}
+
+.icon-btn {
+background: none !important;
+border: none !important;
+border-radius: 0 !important;
+padding: 0 !important;
+margin: 0 !important;
+box-shadow: none !important;
+color: inherit !important;
+min-width: 0 !important;
+width: auto !important;
+height: auto !important;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.icon-btn:focus {
+outline: none !important;
+box-shadow: none !important;
+}
+
+.input-group {
+position: relative;
+width: 100%;
+}
+
+.input-group .form-control {
+padding-right: 2.5rem; /* Espaço para o ícone */
+}
+
+.input-group .icon-btn {
+position: absolute;
+right: 1.1rem;
+top: 50%;
+transform: translateY(-50%);
+z-index: 2;
+border-radius: 5px;
+}
+
+.icon-btn svg {
+width: 25px;
+height: 25px;
+display: block;
 }
 
 @media (max-width: 991px) {
