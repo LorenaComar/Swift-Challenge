@@ -52,6 +52,11 @@ body.dark-mode .navbar {
     object-fit: contain;
 }
 
+.logo-swift:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
 .nav-link {
     color: var(--secondary);
     font-weight: 500;
@@ -233,14 +238,22 @@ body.dark-mode .contact-form {
 }
 
 .carousel-inner {
-  height: 500px; /* ajuste a altura que você quiser */
+  width: 100%;
+  max-width: 1200px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
-.carousel-item img {
+.carousel-item {
   height: 100%;
+}
+
+.carousel-img {
   width: 100%;
-  object-fit: cover;  /* cobre toda a área mantendo proporção */
-  object-position: center; /* centraliza a imagem */
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* =============================================
@@ -252,21 +265,17 @@ footer {
     padding: 40px 0 20px;
 }
 
-.social-links a {
+.social-links li, a {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-right: 15px;
     transition: color 0.3s;
 }
 
-.social-links a:hover {
-    color: var(--primary);
+.social-links li, a:hover {
+    color: var(--thirdary);
 }
 
-.social-links a {
-text-decoration: none; /* Remove sublinhado */
-border-bottom: none;   /* Remove borda inferior */
-}
 .social-links a i {
 text-decoration: none;
 border-bottom: none;
