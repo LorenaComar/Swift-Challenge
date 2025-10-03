@@ -278,7 +278,7 @@ border-bottom: none;
 .back-to-top {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -557,4 +557,105 @@ body.dark-mode .payment-method {
 
 .text-primary-orange {
     color: #ff6600;
+}
+
+/* =========================
+   CAIXA DE PESQUISA CUSTOM
+========================= */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px 15px;
+  border: 2px solid #ff6600;
+  overflow: hidden;
+  max-width: 400px;
+  flex: 1;
+  max-height: 40px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  padding: 8px;
+}
+
+.search-input::placeholder {
+  color: #777;
+  font-style: italic;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: #ff6600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+.search-btn:hover {
+  transform: scale(1.1);
+  color: #cc5200;
+}
+
+/* =========================
+   TÍTULO RESULTADO
+========================= */
+.resultado-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================
+   BOTÃO VOLTAR
+========================= */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  background: #ff6600;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-back:hover {
+  background: #e55a2b;
+  color: #fff;
+}
+
+/* Alinhamento da barra de busca no header */
+.navbar .search-box {
+  display: flex;
+  align-items: center;    
+  margin: 0 45px;         
+  height: 40px;           
+}
+
+.navbar .search-input {
+  height: 100%;           
+  font-size: 0.95rem;
+  padding: 0 10px;
+}
+
+.navbar .search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;           
+  width: 40px;            
+  font-size: 1rem;
 }

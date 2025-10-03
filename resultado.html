@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado da Busca</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="produtos.html">
+          <img src="img/logo-swift-interna-1-_1661799767.png" alt="Logo Swift" class="logo-swift">
+        </a>
+        <div class="collapse navbar-collapse">
+          <form id="searchForm" class="search-box ms-auto">
+            <input id="searchInput" class="search-input" type="search" placeholder="Procure por proteínas, cortes, etc..." aria-label="Buscar">
+            <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" style="margin-top:120px;">
+    <!-- Botão Voltar -->
+    <a href="produtos.html" class="btn-back mb-3"><i class="fas fa-arrow-left"></i> Voltar</a>
+
+    <!-- Título Resultado -->
+    <h2 class="resultado-title mb-4"> Resultado da Busca</h2>
+
+    <!-- Lista de Resultados -->
+    <div class="row" id="results"></div>
+  </main>
+
+  <script src="main.js"></script>
+  <script>
+    // Pega termo da URL
+    const params = new URLSearchParams(window.location.search);
+    const query = params.get("q")?.toLowerCase();
+
+    const resultsDiv = document.getElementById("results");
+
+    if (query) {
+      const filtered = products.filter(p => 
+        p.name.toLowerCase().includes(query)
+      );
+
+      if (filtered.length > 0) {
+        resultsDiv.innerHTML = filtered.map(product => `
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+              <img src="${product.image}" class="card-img-top" alt="${product.name}">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="card-text">R$ ${product.price.toFixed(2).replace('.', ',')}</p>
+                <button class="btn btn-primary mt-auto" onclick="SwiftApp.addToCart(${product.id})">
+                  Adicionar ao Carrinho
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      } else {
+        resultsDiv.innerHTML = `<p>Nenhum produto encontrado para "<strong>${query}</strong>".</p>`;
+      }
+    }
+  </script>
+</body>
+</html>

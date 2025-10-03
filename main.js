@@ -514,7 +514,10 @@ function setupScrollEffects() {
         } else {
             backToTop.classList.remove('show');
         }
+        
     });
+
+    
     
     // Scroll suave para o topo
     if (backToTop) {
@@ -711,6 +714,22 @@ const SwiftApp = {
     }
   }
 };
+
+/* Pesquisa */
+document.addEventListener("DOMContentLoaded", () => {
+  const searchForm = document.getElementById("searchForm");
+  const searchInput = document.getElementById("searchInput");
+
+  if (searchForm && searchInput) {
+    searchForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        window.location.href = `resultado.html?q=${encodeURIComponent(query)}`;
+      }
+    });
+  }
+});
 
 // Inicializar
 document.addEventListener("DOMContentLoaded", () => SwiftApp.init());
