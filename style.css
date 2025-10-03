@@ -575,7 +575,7 @@ body.dark-mode .payment-method {
   display: flex;
   align-items: center;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 20px 0px 20px 20px;
   padding: 5px 15px;
   border: 2px solid #ff6600;
   overflow: hidden;
@@ -667,4 +667,42 @@ body.dark-mode .payment-method {
   height: 100%;           
   width: 40px;            
   font-size: 1rem;
+}
+
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.btn-add-cart {
+  background-color: #f15a24; /* Verde estilo e-commerce */
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  margin-top: auto; /* cola o botão embaixo */
+}
+
+.btn-add-cart:hover {
+  background-color: #d94e1f;
 }
