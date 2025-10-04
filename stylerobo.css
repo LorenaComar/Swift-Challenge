@@ -1,32 +1,54 @@
+
+.chat-float-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 140px;  
+    height: 140px; 
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.2s;
+}
+
+.chat-float-button:hover {
+    transform: scale(1.1);
+}
+
+.chat-float-button img {
+    width: 140px;  
+    height: 140px; 
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+}
+
+
 .robo-container {
-    /* Dimensões e Posição */
     width: 350px;
     height: 500px;
-    position: fixed; /* Fixa o chatbot na tela */
-    bottom: 20px; /* Distância da parte inferior */
-    left: 20px; /* Distância da parte direita */
-    
-    /* Aparência */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    display: flex;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: none; 
     flex-direction: column;
     overflow: hidden;
+    z-index: 9998;
 }
 
 .robo-header {
-    background-color: #e54901; /* Cor vermelha da Swift */
+    background-color: #e54901;
     color: #ece4e3;
     padding: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Poppins', sans-serif; /* Use a fonte que você já linkou no HTML */
-}
-
-.robo-title {
-    font-weight: 600; /* Deixa o título em negrito */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 .close-button {
@@ -36,20 +58,17 @@
     font-size: 1.5rem;
     cursor: pointer;
     opacity: 0.8;
-    transition: opacity 0.2s; /* Transição suave */
+    transition: opacity 0.2s;
 }
-
-.close-button:hover {
-    opacity: 1; /* Aumenta a opacidade ao passar o mouse */
-}
+.close-button:hover { opacity: 1; }
 
 .robo-messages {
-    flex-grow: 1; /* Ocupa todo o espaço vertical disponível */
+    flex-grow: 1;
     padding: 15px;
-    overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espaçamento entre as mensagens */
+    gap: 10px;
 }
 
 .message-bot, .message-user {
@@ -57,13 +76,13 @@
     padding: 12px 18px;
     border-radius: 20px;
     line-height: 1.4;
-    word-wrap: break-word; /* Garante que palavras longas quebrem a linha */
+    word-wrap: break-word;
 }
 
 .message-bot {
     background-color: #e6e6e6;
     align-self: flex-start;
-    border-bottom-left-radius: 5px; /* Deixa a quina do balão menos arredondada */
+    border-bottom-left-radius: 5px;
 }
 
 .message-user {
@@ -101,7 +120,4 @@
     font-weight: 500;
     transition: background-color 0.2s;
 }
-
-#send-button:hover {
-    background-color: #c40120;
-}
+#send-button:hover { background-color: #c40120; }
