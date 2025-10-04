@@ -432,66 +432,112 @@ RESPONSIVIDADE
 /* =============================================
 PÁGINA DE GAMIFICAÇÃO
 ============================================= */
-.hunt-map {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    overflow: hidden;
+/* Sombra de texto */
+.text-shadow {
+  text-shadow: 2px 2px 5px #000;
 }
 
-.hunt-point {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    cursor: pointer;
-    transform: translate(-50%, -50%);
+header {
+  height: 80px;
+  /* outros estilos */
 }
 
-.hunt-point.locked {
-    background-color: #ccc;
-    cursor: not-allowed;
+.game-bg {
+  min-height: calc(100vh - 80px);
+  background: url("img/mapa_swift.png") no-repeat center center fixed;
+  background-size: cover;
 }
 
-.hunt-point.unlocked {
-    background-color: var(--success);
+/* Botões interativos do mapa */
+.map-point {
+  position: absolute;
+  background: radial-gradient(circle, #ffd966 40%, #d4a017 100%);
+  border: 2px solid #5a3c1a;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  animation: pulse 1.5s infinite;
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-point:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px rgba(255, 215, 100, 0.9);
+}
+
+/* Correto e incorreto */
+.map-point.correct {
+  background: radial-gradient(circle, #a6e6a6 40%, #3c9c3c 100%);
+  border: 2px solid #2b662b;
+  animation: none;
+}
+
+.map-point.wrong {
+  background: radial-gradient(circle, #f7a6a6 40%, #d33c3c 100%);
+  border: 2px solid #7a1a1a;
+  animation: none;
+}
+
+/* Animação pulse */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Caixa de quiz estilo pergaminho */
+#quizBox {
+  background: url("../img/pergaminho.jpg") repeat;
+  border: 3px solid #5a3c1a;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.6);
+  color: #2c1a0c;
+  font-weight: bold;
+}
+
+/* Botões das opções */
+#quizOpcoes button {
+  background: #fff4d1;
+  border: 2px solid #5a3c1a;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.2s;
+}
+
+#quizOpcoes button:hover {
+  background: #ffd966;
+  transform: scale(1.05);
+}
+
+/* Barra de progresso (adiciona gradiente, mas não sobrescreve o que já existe) */
+.progress {
+  height: 25px;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .progress-bar {
-    height: 25px;
-    border-radius: 15px;
-    background-color: #e9ecef;
+  background: linear-gradient(to right, #d9534f, #f5c542);
+  font-weight: bold;
 }
 
-.progress-bar-fill {
-    height: 100%;
-    border-radius: 15px;
-    background-color: var(--primary);
-    transition: width 0.5s ease;
+/* Additional styles for improved gamification */
+#earnedBadges .badge { font-size: 0.9rem; }
+.toast { min-width: 220px; margin-bottom: 8px; }
+
+/* Responsividade para hunt-map e map-point */
+@media (max-width: 768px) {
+  .hunt-map { height: 480px; }
+  .map-point { width: 36px; height: 36px; font-size:16px; }
 }
 
-.achievement-card {
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.achievement-card:hover {
-    transform: translateY(-5px);
-}
-
-.achievement-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-}
 
 /* =============================================
 PÁGINA DE COMPRA
