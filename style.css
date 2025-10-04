@@ -19,7 +19,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text);
-    padding-top: 80px;
+    padding: 0;
+    margin: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -43,6 +44,11 @@ h1, h2, h3, h4, h5, h6 {
 
 body.dark-mode .navbar {
     background-color: var(--dark-card);
+}
+
+header {
+    height: 80px;
+    min-height: 80px;
 }
 
 .logo-swift {
@@ -443,11 +449,21 @@ header {
 }
 
 .game-bg {
-  min-height: calc(100vh - 80px);
-  background: url("img/mapa_swift.png") no-repeat center center fixed;
-  background-size: cover;
+    min-height: calc(100vh - 80px);
+    height: calc(100vh - 80px);
+    width: 100vw;
+    background: url("img/mapa_swift.png") no-repeat center top;
+    background-size: contain;
+    background-color: #f5e2c0; /* cor de fundo parecida com o mapa, opcional */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
 }
-
 /* Botões interativos do mapa */
 .map-point {
   position: absolute;
